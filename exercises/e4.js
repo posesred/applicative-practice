@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function getPlanetsWithLowGravity(data) {
   // Your code goes here...
+  let lessThanTen =[];
+  for(let planet of data.planets){
+    if(planet.gravity < 10){
+      lessThanTen.push(planet.name)
+    }
+  }
+  return lessThanTen
 }
 
 
