@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
-  let astriodNames = []
-  for(let astroiod of data.asteroids){
-    astriodNames.push(astroiod.name)
-  }
-  return astriodNames;
+  return data.asteroids.map(item => item.name)
 }
 
 
