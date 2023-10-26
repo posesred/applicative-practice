@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getOrbitalPeriodsSum(data) {
   // Your code goes here...
-  let  sumOfOrbitalPeriod = 0;
-  for(let i = 0; i<data.asteroids.length; i++){
-    sumOfOrbitalPeriod+=data.asteroids[i].orbitalPeriod;  
-  }
-  return sumOfOrbitalPeriod
+  return  data.asteroids.reduce((acc, asteroid) =>acc + asteroid.orbitalPeriod,0)
 }
 
 
